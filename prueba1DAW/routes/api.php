@@ -31,4 +31,9 @@ Route::group( ['middleware'],function() {
     Route::post('users', 'UserController@store');
     Route::put('users/{user}', 'UserController@update');
     Route::delete('users/{user}', 'UserController@delete');
+
+    Route::get('genres/{genre}/movies', 'GenreController@genre_movies');
+    Route::get('users/{user}/genres', 'UserController@user_genres');
+
+
 });
